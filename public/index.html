@@ -22,8 +22,9 @@
 		});
 
 		function ping() {
+			console.log("Sending Ping");
 			SOCKET.emit("ping", {}, (response) => {
-				console.log(response);
+				console.log(`Received: ${response}`);
 			});
 		}
 	</script>
