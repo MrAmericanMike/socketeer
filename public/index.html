@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="/socket.io/socket.io.js"></script>
+	<title>Socketeer</title>
+</head>
+
+<body>
+	<h1>Socketeer</h1>
+
+	<script>
+
+		const SOCKET = io();
+
+		SOCKET.on("connect", () => {
+			ping();
+			setInterval(ping, 30000);
+		});
+
+		function ping() {
+			SOCKET.emit("ping", {}, (response) => {
+				console.log(response);
+			});
+		}
+	</script>
+
+</body>
+
+</html>
