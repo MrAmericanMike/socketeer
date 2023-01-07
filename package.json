@@ -15,6 +15,7 @@
 		"socket.io-client": "^4.5.1"
 	},
 	"devDependencies": {
+		"@architect/sandbox": "^5.4.1",
 		"nodemon": "^2.0.19"
 	}
 }
