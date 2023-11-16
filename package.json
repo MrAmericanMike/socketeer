@@ -4,6 +4,7 @@
 	"description": "Socketeer",
 	"author": "MrAmericanMike",
 	"main": "src/main.js",
+	"type": "module",
 	"scripts": {
 		"start": "node src/main.js"
 	},
